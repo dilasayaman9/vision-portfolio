@@ -1,43 +1,26 @@
+import { Link } from 'react-router-dom';
 import ButtonLink from '../components/ButtonLink.jsx';
 import PageMeta from '../components/PageMeta.jsx';
 import ProjectCard from '../components/ProjectCard.jsx';
 import SectionHeading from '../components/SectionHeading.jsx';
 import SkillGroups from '../components/SkillGroups.jsx';
+import dilasaPortrait from '../assets/images/dilasa-portrait.jpg';
 import { experience, projects, services } from '../data/siteData.js';
-import { Link } from 'react-router-dom';
-
-// Add the final photo at src/assets/images/dilasa-working-at-laptop.jpg.
-// Until that file exists, the homepage renders the intentional placeholder below.
-const laptopPhotoModules = import.meta.glob('../assets/images/dilasa-working-at-laptop.jpg', {
-  eager: true,
-  import: 'default',
-  query: '?url',
-});
-const laptopPhoto = laptopPhotoModules['../assets/images/dilasa-working-at-laptop.jpg'];
 
 export default function Home() {
   return (
     <>
       <PageMeta />
       <section className="home-hero">
-        <div className="container hero-grid">
-          <div>
-            <p className="eyebrow">Web Design + Development</p>
-            <h1>Designing Your Place on the Web</h1>
-            <p className="hero-summary">
-              I combine thoughtful design and front-end development to build attractive, responsive,
-              and user-friendly websites for organizations, teams, and people with something to share.
-            </p>
-            <div className="hero-actions">
-              <ButtonLink to="/projects">View My Work</ButtonLink>
-              <ButtonLink to="/book" variant="secondary">
-                Book a Call
-              </ButtonLink>
-            </div>
-          </div>
-          <div className="hero-note" aria-label="Portfolio focus">
-            <p>Student portfolio</p>
-            <strong>Web designer and developer seeking front-end internship opportunities.</strong>
+        <div className="container hero-center">
+          <p className="eyebrow">WEB DESIGN + DEVELOPMENT</p>
+          <h1>Designing Your Place on the Web</h1>
+          <p className="hero-summary">
+            I combine thoughtful design and front-end development to build attractive, responsive,
+            and user-friendly websites for organizations, teams, and people with something to share.
+          </p>
+          <div className="hero-actions">
+            <ButtonLink to="/projects">View My Work</ButtonLink>
           </div>
         </div>
       </section>
@@ -45,20 +28,14 @@ export default function Home() {
       <section className="section section-cream home-story-section">
         <div className="container home-story">
           <div className="story-image-wrap">
-            {laptopPhoto ? (
-              <img
-                className="story-image"
-                src={laptopPhoto}
-                alt="Dilasa working at a laptop."
-              />
-            ) : (
-              <div className="story-image story-image-placeholder" role="img" aria-label="Dilasa working at a laptop image placeholder">
-                <span>Dilasa working at a laptop</span>
-              </div>
-            )}
+            <img
+              className="story-image"
+              src={dilasaPortrait}
+              alt="Dilasa Yaman standing inside a modern art museum"
+            />
           </div>
           <div className="story-content">
-            <p className="eyebrow">My Story</p>
+            <p className="eyebrow">MY STORY</p>
             <h2>Where creativity and technology meet</h2>
             <p>
               I found my place in web development by combining two things I have always enjoyed:

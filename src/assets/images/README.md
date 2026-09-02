@@ -1,7 +1,7 @@
 # Homepage Story Image
 
-Place the final homepage story photo here:
+The homepage story portrait is stored here:
 
-`src/assets/images/dilasa-working-at-laptop.jpg`
+`src/assets/images/dilasa-portrait.jpg`
 
-The homepage currently uses a safe placeholder when that file is missing. After adding the real image with this exact filename, Vite will include it automatically and the image will render with a vertical 4:5 aspect ratio using `object-fit: cover`.
+The `src/pages/Home.jsx` story section imports this image directly. Keep this filename if you replace the photo later so the import continues to work.

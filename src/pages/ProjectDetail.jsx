@@ -1,6 +1,6 @@
 import { ExternalLink } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
-import ImagePlaceholder from '../components/ImagePlaceholder.jsx';
+import ProjectImage from '../components/ProjectImage.jsx';
 import PageHero from '../components/PageHero.jsx';
 import PageMeta from '../components/PageMeta.jsx';
 import { projects } from '../data/siteData.js';
@@ -50,7 +50,7 @@ export default function ProjectDetail() {
             </div>
           </aside>
           <div className="case-content">
-            <ImagePlaceholder project={project} />
+            <ProjectImage project={project} variant="case-study" />
             <section>
               <h2>Overview and Goals</h2>
               <p>{project.overview}</p>
@@ -85,13 +85,6 @@ export default function ProjectDetail() {
                 <p>{project.outcome}</p>
               </section>
             ) : null}
-            <section>
-              <h2>Screenshot Placeholder</h2>
-              <p>
-                This placeholder marks where the final project screenshot should appear once the image
-                is ready. Replacement details are documented in the public image assets README.
-              </p>
-            </section>
           </div>
         </div>
       </section>

@@ -1,3 +1,7 @@
+import buffaloRiverScreenshot from '../assets/images/projects/buffalo-river-ui-screenshot.png';
+import cmddScreenshot from '../assets/images/projects/cmdd-ui-screenshot.png';
+import insuraMatchScreenshot from '../assets/images/projects/insura-match-ui.png';
+
 export const profile = {
   name: 'Dilasa Yaman',
   initials: 'DY',
@@ -26,8 +30,8 @@ export const projects = [
     dates: 'June 2026-Present',
     role: 'Web Developer',
     category: 'WordPress, responsive web, content organization',
-    image: '/images/placeholders/cmdd-website.svg',
-    imageAlt: 'Placeholder for the CMDD WordPress website screenshot.',
+    image: cmddScreenshot,
+    imageAlt: 'Center for Molecular Design and Development website homepage',
     description:
       'A university-affiliated research organization website focused on clear content structure, responsive pages, and a professional web presence.',
     overview:
@@ -63,8 +67,8 @@ export const projects = [
     dates: 'June 8-12, 2026',
     role: 'UI/UX Designer and Front-End Lead',
     category: 'UI/UX, React interface, hackathon collaboration',
-    image: '/images/placeholders/insuramatch-app.svg',
-    imageAlt: 'Placeholder for the InsuraMatch web application screenshot.',
+    image: insuraMatchScreenshot,
+    imageAlt: 'InsuraMatch health insurance platform homepage',
     description:
       'A collaborative hackathon project that helps users explore insurance-plan matches, comparisons, educational content, and an assistant experience.',
     overview:
@@ -104,8 +108,8 @@ export const projects = [
     dates: 'Earlier individual project',
     role: 'Designer and Developer',
     category: 'Travel UX, visual design, front-end development',
-    image: '/images/placeholders/buffalo-river-getaway.svg',
-    imageAlt: 'Placeholder for the Buffalo River Getaway project screenshot.',
+    image: buffaloRiverScreenshot,
+    imageAlt: 'Buffalo River Getaway website homepage',
     description:
       'An earlier individual project exploring travel and lodging content, visual identity, destination information, and responsive presentation.',
     overview:

@@ -178,17 +178,16 @@ textarea {
 }
 
 .home-hero {
-  min-height: calc(100vh - 76px);
+  min-height: min(720px, calc(100vh - 76px));
   display: grid;
   align-items: center;
   padding: clamp(5rem, 11vw, 9rem) 0 clamp(4rem, 8vw, 7rem);
 }
 
-.hero-grid {
+.hero-center {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(230px, 330px);
-  gap: clamp(2rem, 6vw, 5rem);
-  align-items: end;
+  justify-items: center;
+  text-align: center;
 }
 
 .eyebrow {
@@ -244,6 +243,7 @@ p {
 .hero-summary {
   max-width: 690px;
   margin-top: var(--space-lg);
+  margin-inline: auto;
 }
 
 .hero-actions {
@@ -251,6 +251,10 @@ p {
   flex-wrap: wrap;
   gap: var(--space-md);
   margin-top: var(--space-xl);
+}
+
+.hero-center .hero-actions {
+  justify-content: center;
 }
 
 .centered-actions {
@@ -304,27 +308,6 @@ p {
   box-shadow: none;
 }
 
-.hero-note {
-  border-top: var(--border-thin);
-  border-bottom: var(--border-thin);
-  padding: var(--space-lg) 0;
-}
-
-.hero-note p {
-  font-family: var(--font-label);
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  margin-bottom: var(--space-md);
-}
-
-.hero-note strong {
-  display: block;
-  font-family: var(--font-display);
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
-  line-height: 1.18;
-  font-weight: 400;
-}
-
 .page-hero {
   padding: clamp(4rem, 9vw, 7rem) 0;
   text-align: center;
@@ -369,7 +352,7 @@ p {
 
 .home-story {
   display: grid;
-  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1fr);
+  grid-template-columns: minmax(280px, 1fr) minmax(0, 1fr);
   gap: clamp(2.5rem, 7vw, 6rem);
   align-items: center;
 }
@@ -381,40 +364,11 @@ p {
 .story-image {
   width: 100%;
   aspect-ratio: 4 / 5;
-  display: grid;
-  place-items: center;
   object-fit: cover;
+  object-position: 50% center;
   border: var(--border-thin);
   border-radius: var(--radius-sm);
   background: var(--color-blush);
-}
-
-.story-image-placeholder {
-  min-height: 0;
-  padding: var(--space-xl);
-  position: relative;
-  overflow: hidden;
-  color: var(--color-ink);
-}
-
-.story-image-placeholder::before {
-  content: '';
-  position: absolute;
-  inset: var(--space-lg);
-  border: var(--border-thin);
-  border-radius: calc(var(--radius-sm) - 2px);
-  background:
-    linear-gradient(90deg, transparent 0 48%, rgba(37, 24, 23, 0.14) 48% 49%, transparent 49%),
-    linear-gradient(180deg, rgba(255, 250, 245, 0.62), rgba(255, 250, 245, 0.16));
-}
-
-.story-image-placeholder span {
-  position: relative;
-  max-width: 14ch;
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 4rem);
-  line-height: 1;
-  text-align: center;
 }
 
 .story-content {
@@ -562,9 +516,14 @@ dd {
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
+  object-position: top center;
   border: var(--border-thin);
   border-radius: var(--radius-sm);
   background: var(--color-cream-soft);
+}
+
+.image-frame-case-study img {
+  aspect-ratio: 16 / 9;
 }
 
 .image-frame figcaption {
@@ -905,7 +864,6 @@ textarea {
 }
 
 @media (max-width: 980px) {
-  .hero-grid,
   .home-story,
   .two-column,
   .services-band,

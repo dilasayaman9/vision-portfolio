@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import ImagePlaceholder from './ImagePlaceholder.jsx';
+import ProjectImage from './ProjectImage.jsx';
 
 export default function ProjectCard({ project, featured = false }) {
   return (
     <article className={`project-card ${featured ? 'project-card-featured' : ''}`}>
-      <ImagePlaceholder project={project} />
+      <ProjectImage project={project} />
       <div className="project-card-body">
         <p className="eyebrow">{project.category}</p>
         <h3>{project.title}</h3>
