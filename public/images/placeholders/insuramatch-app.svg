@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">InsuraMatch web application screenshot placeholder</title>
+  <desc id="desc">Refined placeholder labeled for the InsuraMatch application screenshot.</desc>
+  <rect width="1440" height="900" fill="#e4b7ad"/>
+  <rect x="80" y="82" width="1280" height="736" fill="#fffaf5" stroke="#241716" stroke-width="3"/>
+  <rect x="130" y="140" width="1180" height="72" fill="#f1d2c9" stroke="#241716" stroke-width="2"/>
+  <rect x="130" y="265" width="520" height="318" fill="#f7efe7" stroke="#241716" stroke-width="2"/>
+  <rect x="705" y="265" width="605" height="92" fill="#d8dfce" stroke="#241716" stroke-width="2"/>
+  <rect x="705" y="398" width="605" height="92" fill="#f1d2c9" stroke="#241716" stroke-width="2"/>
+  <rect x="705" y="531" width="605" height="92" fill="#d6aaa1" stroke="#241716" stroke-width="2"/>
+  <text x="130" y="685" font-family="Arial, sans-serif" font-size="34" letter-spacing="6" fill="#241716">SCREENSHOT PLACEHOLDER</text>
+  <text x="130" y="740" font-family="Georgia, serif" font-size="58" fill="#241716">InsuraMatch Web Application</text>
+</svg>

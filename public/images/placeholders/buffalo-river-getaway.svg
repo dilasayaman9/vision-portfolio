@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Buffalo River Getaway screenshot placeholder</title>
+  <desc id="desc">Warm editorial placeholder labeled for the Buffalo River Getaway project screenshot.</desc>
+  <rect width="1440" height="900" fill="#f7efe7"/>
+  <rect x="78" y="76" width="1284" height="748" fill="#d8dfce" stroke="#231716" stroke-width="3"/>
+  <path d="M78 620 C230 565 347 575 470 622 C625 680 728 666 866 607 C1042 532 1208 556 1362 612 L1362 824 L78 824 Z" fill="#e4b7ad" stroke="#231716" stroke-width="3"/>
+  <circle cx="1148" cy="226" r="92" fill="#f7efe7" stroke="#231716" stroke-width="3"/>
+  <rect x="140" y="148" width="560" height="80" fill="#fffaf5" opacity=".85"/>
+  <rect x="140" y="275" width="860" height="20" fill="#231716" opacity=".38"/>
+  <rect x="140" y="320" width="700" height="20" fill="#231716" opacity=".28"/>
+  <text x="140" y="675" font-family="Arial, sans-serif" font-size="34" letter-spacing="6" fill="#231716">SCREENSHOT PLACEHOLDER</text>
+  <text x="140" y="730" font-family="Georgia, serif" font-size="58" fill="#231716">Buffalo River Getaway</text>
+</svg>
