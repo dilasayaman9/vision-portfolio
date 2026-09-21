@@ -80,7 +80,7 @@ export default function Contact() {
         title="Contact | Dilasa Yaman"
         description="Contact Dilasa Yaman about internships, collaborations, website projects, or general questions."
       />
-      <PageHero eyebrow="Contact" title="Start a Conversation">
+      <PageHero eyebrow="Contact" title="Start a Conversation" variant="interior">
         <p>
           I would be happy to hear about internship opportunities, collaborations, website projects,
           or general questions.

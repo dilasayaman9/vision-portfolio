@@ -23,7 +23,7 @@ export default function ProjectDetail() {
         title={`${project.fullTitle} | Dilasa Yaman`}
         description={`${project.fullTitle} case study by Dilasa Yaman.`}
       />
-      <PageHero eyebrow={project.category} title={project.fullTitle}>
+      <PageHero eyebrow={project.category} title={project.fullTitle} variant="interior">
         <p>{project.description}</p>
       </PageHero>
 

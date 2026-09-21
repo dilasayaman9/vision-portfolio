@@ -1,7 +1,8 @@
 import { Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { navLinks, profile } from '../data/siteData.js';
+import { navLinks } from '../data/siteData.js';
+import dilasaLogo from '../assets/images/branding/dilasa-logo.svg';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,8 +23,8 @@ export default function Navigation() {
         Skip to content
       </a>
       <nav className="nav-shell" aria-label="Primary navigation">
-        <Link className="wordmark" to="/" aria-label="Dilasa Yaman home">
-          {profile.initials}
+        <Link className="wordmark" to="/" aria-label="Dilasa Yaman — Home">
+          <img src={dilasaLogo} alt="" />
         </Link>
         <button
           className="mobile-menu-button"

@@ -1,7 +1,22 @@
-import { Download } from 'lucide-react';
+import { Download, Github, Linkedin, Mail } from 'lucide-react';
 import PageHero from '../components/PageHero.jsx';
 import PageMeta from '../components/PageMeta.jsx';
 import { achievements, experience, profile } from '../data/siteData.js';
+
+const resumeSkills = [
+  'Web Development',
+  'Responsive Web Design',
+  'HTML5 & CSS3',
+  'JavaScript',
+  'React',
+  'WordPress, Domains & Hosting',
+  'UI/UX Design',
+  'Figma',
+  'Git & GitHub',
+  'Python — Basic',
+  'Team Collaboration',
+  'Customer Service & Client Communication',
+];
 
 export default function Resume() {
   return (
@@ -10,15 +25,29 @@ export default function Resume() {
         title="Résumé | Dilasa Yaman"
         description="Resume page for Dilasa Yaman, including education, experience, achievements, and a PDF download."
       />
-      <PageHero eyebrow="Resume" title="Résumé">
-        <p>
-          A scan-friendly overview of my academic path, current experience, and selected achievements.
-        </p>
-        <a className="button button-primary" href={profile.resumePath} download>
-          <span>Download Résumé</span>
-          <Download aria-hidden="true" size={18} />
-        </a>
-      </PageHero>
+        <PageHero eyebrow="Resume" title="Résumé" variant="interior">
+          <p>
+            A scan-friendly overview of my academic path, current experience, and selected achievements.
+          </p>
+          <a className="button button-primary" href={profile.resumePath} download>
+            <span>Download Résumé</span>
+            <Download aria-hidden="true" size={18} />
+          </a>
+          <nav className="professional-links" aria-label="Professional links">
+            <a href={profile.github} target="_blank" rel="noreferrer noopener">
+              <Github aria-hidden="true" size={16} />
+              GitHub
+            </a>
+            <a href={profile.linkedIn} target="_blank" rel="noreferrer noopener">
+              <Linkedin aria-hidden="true" size={16} />
+              LinkedIn
+            </a>
+            <a href={profile.emailLink}>
+              <Mail aria-hidden="true" size={16} />
+              Email Me
+            </a>
+          </nav>
+        </PageHero>
 
       <section className="section section-cream">
         <div className="container resume-layout">
@@ -42,6 +71,16 @@ export default function Resume() {
                 </article>
               ))}
             </div>
+          </section>
+
+          <section className="resume-section" aria-labelledby="skills-heading">
+            <p className="eyebrow">Capabilities</p>
+            <h2 id="skills-heading">Skills</h2>
+            <ul className="resume-skill-grid">
+              {resumeSkills.map((skill) => (
+                <li key={skill}>{skill}</li>
+              ))}
+            </ul>
           </section>
 
           <section className="resume-section" aria-labelledby="achievements-heading">

@@ -26,6 +26,7 @@
   --radius-pill: 999px;
   --border-thin: 1px solid var(--color-line);
   --transition: 180ms ease;
+  --header-height: 108px;
   color: var(--color-ink);
   background: var(--color-cream);
   font-family: var(--font-body);
@@ -44,7 +45,7 @@ html {
 
 body {
   margin: 0;
-  min-width: 320px;
+  min-width: 0;
   background: var(--color-cream);
 }
 
@@ -110,7 +111,7 @@ textarea {
 
 .nav-shell {
   width: min(100% - 2rem, 1180px);
-  min-height: 76px;
+  min-height: var(--header-height);
   margin-inline: auto;
   display: flex;
   align-items: center;
@@ -118,12 +119,26 @@ textarea {
   gap: var(--space-lg);
 }
 
-.wordmark,
 .footer-wordmark {
   text-decoration: none;
   font-family: var(--font-label);
   font-size: 0.88rem;
   letter-spacing: 0;
+}
+
+.wordmark {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 92px;
+  height: 92px;
+}
+
+.wordmark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .nav-links {
@@ -178,7 +193,7 @@ textarea {
 }
 
 .home-hero {
-  min-height: min(720px, calc(100vh - 76px));
+  min-height: min(720px, calc(100vh - var(--header-height)));
   display: grid;
   align-items: center;
   padding: clamp(5rem, 11vw, 9rem) 0 clamp(4rem, 8vw, 7rem);
@@ -313,6 +328,36 @@ p {
   text-align: center;
 }
 
+.page-hero-content {
+  display: grid;
+  justify-items: center;
+}
+
+.page-hero h1 {
+  max-width: min(100%, 980px);
+  margin-inline: auto;
+}
+
+.page-hero-about {
+  padding: clamp(3rem, 6vw, 5.25rem) 0;
+}
+
+.page-hero-about h1 {
+  max-width: min(100%, 1070px);
+  font-size: clamp(3.2rem, 5.9vw, 6.25rem);
+}
+
+@media (min-width: 1200px) {
+  .page-hero-interior {
+    padding: clamp(3rem, 6vw, 5.25rem) 0;
+  }
+
+  .page-hero-interior h1 {
+    max-width: min(100%, 1070px);
+    font-size: clamp(3.2rem, 5.9vw, 6.25rem);
+  }
+}
+
 .page-hero-left {
   text-align: left;
 }
@@ -324,6 +369,29 @@ p {
 
 .page-hero .button {
   margin-top: var(--space-lg);
+}
+
+.professional-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm) var(--space-lg);
+  margin-top: var(--space-md);
+}
+
+.professional-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-brown);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.professional-links a:hover {
+  color: var(--color-plum);
 }
 
 .section {
@@ -348,6 +416,36 @@ p {
   grid-template-columns: minmax(0, 0.82fr) minmax(0, 1fr);
   gap: clamp(2rem, 7vw, 6rem);
   align-items: start;
+}
+
+.about-story {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(2.5rem, 7vw, 6rem);
+  align-items: center;
+}
+
+.about-story-media {
+  width: 100%;
+  max-width: 560px;
+  margin: 0;
+  justify-self: center;
+}
+
+.about-story-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% center;
+  border: var(--border-thin);
+  border-radius: var(--radius-sm);
+  background: var(--color-blush);
+}
+
+.about-story-content {
+  display: grid;
+  gap: var(--space-lg);
+  max-width: 680px;
 }
 
 .home-story {
@@ -628,6 +726,21 @@ dd {
   margin-bottom: var(--space-md);
 }
 
+.resume-skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 var(--space-xl);
+  margin: var(--space-lg) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.resume-skill-grid li {
+  padding: 0.8rem 0;
+  border-top: 1px solid rgba(37, 24, 23, 0.16);
+  font-size: 0.98rem;
+}
+
 .project-detail-layout {
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr);
@@ -863,8 +976,29 @@ textarea {
   }
 }
 
+@media (max-width: 1024px) {
+  :root {
+    --header-height: 96px;
+  }
+
+  .wordmark {
+    width: 84px;
+    height: 84px;
+  }
+
+  .about-story {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 980px) {
+
+  .resume-skill-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .home-story,
+  .about-story,
   .two-column,
   .services-band,
   .project-detail-layout,
@@ -889,8 +1023,12 @@ textarea {
 }
 
 @media (max-width: 760px) {
+  :root {
+    --header-height: 86px;
+  }
+
   .nav-shell {
-    min-height: 68px;
+    min-height: var(--header-height);
   }
 
   .mobile-menu-button {
@@ -899,7 +1037,7 @@ textarea {
 
   .nav-links {
     position: fixed;
-    inset: 68px 0 auto 0;
+    inset: var(--header-height) 0 auto 0;
     display: grid;
     gap: 0;
     padding: var(--space-lg) 1rem var(--space-xl);
@@ -927,12 +1065,18 @@ textarea {
     padding: 0 1.2rem;
   }
 
+  .wordmark {
+    width: 72px;
+    height: 72px;
+  }
+
   .home-hero {
     min-height: auto;
   }
 
   .field-pair,
   .skill-grid,
+  .resume-skill-grid,
   .quick-facts,
   .value-list,
   .footer-inner {
@@ -959,12 +1103,20 @@ textarea {
     font-size: clamp(2rem, 10vw, 3rem);
   }
 
+  .page-hero-about h1 {
+    font-size: clamp(2.55rem, 11vw, 3.2rem);
+  }
+
   .button {
     width: 100%;
   }
 
   .hero-actions {
     width: 100%;
+  }
+
+  .resume-skill-grid {
+    grid-template-columns: 1fr;
   }
 
   .calendly-panel,

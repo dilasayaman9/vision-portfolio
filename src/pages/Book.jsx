@@ -19,7 +19,7 @@ export default function Book() {
         title="Book a Call | Dilasa Yaman"
         description="Schedule a 30-minute website consultation with Dilasa Yaman."
       />
-      <PageHero eyebrow="30-Minute Consultation" title="Let's Talk About Your Website">
+      <PageHero eyebrow="30-Minute Consultation" title="Let's Talk About Your Website" variant="interior">
         <p>
           If you are thinking about a new website, a redesign, or help improving an existing presence,
           this call is a calm place to talk through what you need.

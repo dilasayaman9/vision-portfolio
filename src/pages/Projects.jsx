@@ -10,7 +10,7 @@ export default function Projects() {
         title="Projects | Dilasa Yaman"
         description="Explore web design and development case studies by Dilasa Yaman."
       />
-      <PageHero eyebrow="Projects" title="Case Studies in Design and Development">
+      <PageHero eyebrow="Projects" title="Case Studies in Design and Development" variant="interior">
         <p>
           These projects show my work across WordPress development, collaborative front-end interfaces,
           and earlier individual website design.
