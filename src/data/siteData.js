@@ -1,6 +1,7 @@
 import buffaloRiverScreenshot from '../assets/images/projects/buffalo-river-ui-screenshot.png';
 import cmddScreenshot from '../assets/images/projects/cmdd-ui-screenshot.png';
 import insuraMatchScreenshot from '../assets/images/projects/insura-match-ui.png';
+import { arkBalloonSat } from './arkBalloonSat.js';
 
 export const profile = {
   name: 'Dilasa Yaman',
@@ -17,7 +18,7 @@ export const profile = {
 
 export const navLinks = [
   { label: 'About', to: '/about' },
-  { label: 'Projects', to: '/projects' },
+  { label: 'Work', to: '/projects' },
   { label: 'Résumé', to: '/resume' },
   { label: 'Contact', to: '/contact' },
 ];
@@ -29,6 +30,7 @@ export const projects = [
     fullTitle: 'Center for Molecular Design and Development Website',
     dates: 'June 2026-Present',
     role: 'Web Developer',
+    context: 'University Research Center Website',
     category: 'WordPress, responsive web, content organization',
     image: cmddScreenshot,
     imageAlt: 'Center for Molecular Design and Development website homepage',
@@ -66,6 +68,7 @@ export const projects = [
     fullTitle: 'InsuraMatch',
     dates: 'June 8-12, 2026',
     role: 'UI/UX Designer and Front-End Lead',
+    context: 'Hackathon Team Project',
     category: 'UI/UX, React interface, hackathon collaboration',
     image: insuraMatchScreenshot,
     imageAlt: 'InsuraMatch health insurance platform homepage',
@@ -101,8 +104,10 @@ export const projects = [
       { label: 'View GitHub Repository', href: 'https://github.com/Ishmam97/Coverage_compass' },
     ],
   },
+  arkBalloonSat,
   {
     slug: 'buffalo-river-getaway',
+    showOnWork: false,
     title: 'Buffalo River Getaway',
     fullTitle: 'Buffalo River Getaway',
     dates: 'Earlier individual project',

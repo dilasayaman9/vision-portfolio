@@ -1,0 +1,7 @@
+# ARKBalloonSat portfolio handoff
+
+- **Figma evidence.** The case study uses local exports of the shared early desktop and phone wireframes (`55:5`, `55:86`) and the latest desktop and phone homepage designs (`1:2`, `1:4`). Figma prompted for sign-in in the preview browser. The exported images are viewable directly on the portfolio. Tablet frames (`55:46`, `76:104`) and the palette (`127:64`) are optional additions if a future edit needs them.
+- **WordPress evidence.** The screenshots come from saved October and November 2026 development captures. The crops omit editor controls and show the homepage, program cards, shared footer, Resources acknowledgments, and workshop request introduction. Use fresh signed-out captures for future visual updates.
+- **Verified request flow.** The development homepage and Contact page link to the workshop or launch request page. The request page embeds a Google Form and offers an external fallback. Contact has a separate message form. Form delivery was outside this read-only review.
+- **Project status.** The client-owned domain and transfer date remain pending. Keep the development URL and accompanying note until the transfer is confirmed.
+- **University Projects.** The panel in `src/pages/Projects.jsx` contains the planned category placeholders. When coursework is ready, add its evidence to `src/data/siteData.js` and render its cards in that panel with `ProjectCard`. Buffalo River Getaway remains accessible via Home and its original detail route.

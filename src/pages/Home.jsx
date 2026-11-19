@@ -70,7 +70,7 @@ export default function Home() {
             Three projects showing WordPress development, UI/UX leadership, responsive interfaces, and earlier individual work.
           </SectionHeading>
           <div className="featured-projects">
-            {projects.map((project, index) => (
+            {projects.filter((project) => project.showOnHome !== false).map((project, index) => (
               <ProjectCard key={project.slug} project={project} featured={index === 0} />
             ))}
           </div>
